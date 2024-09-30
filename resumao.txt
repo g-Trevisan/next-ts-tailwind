@@ -1,0 +1,23 @@
+RESUMAO DAS TECNOLOGIAS UTILIZADAS
+
+
+NEXTJS
+    - Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.
+    
+    - Renderizaçao do lado do servidor (Server Side Rendering - SSR): Renderiza as páginas no servidor, enviando HTML pronto para o navegador e consequentemente carregando com mais agilidade.
+    
+    - Geraçao de site estático (Static Site Generation - SSG ou Pré-Render), ideal para sites estáticos que não alteram seu conteúdo com muita frequência, como Blogs e portifólios.
+    
+    - Roteamento baseado em arquivos: Siplifica a criação de rotas na aplicaçao. Podemos criar arquivos dentro de uma pasta Pages e o Next automaticamente gera as rotas correspondentes. (Ex: /pages/sobre.js cria a rota /sobre)
+    
+    - Otimiza o carregamento de imagens convertendoas para formatos otimizados como o WebP, melhorando a performance da aplicação.
+
+    - Suporte a Typescript, que adiciona tipagem estática ao JavaScript, auxiliando na prevenção de erros e melhora a qualidade do código.
+
+    - API Routes: Permite criar APIs facilmente dentro da sua aplicaçao Next. Para isso, podemos criar uma pasta pages/api e o Next os tratará como endpoints de API.
+
+    - Pré renderizaçao de Dados: Busca dados da API antes de renderizar a página, garantido que o conteúdo esteja disponível imediatamente para o usuário.
+
+
+ReactJS Hooks
+    - usePathname: Hook especifico do Next que permite acessar o pathname da URL atual dentro do componente.
