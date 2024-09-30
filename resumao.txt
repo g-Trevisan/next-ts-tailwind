@@ -21,3 +21,7 @@ NEXTJS
 
 ReactJS Hooks
     - usePathname: Hook especifico do Next que permite acessar o pathname da URL atual dentro do componente.
+
+
+JavaScript
+    - Let:

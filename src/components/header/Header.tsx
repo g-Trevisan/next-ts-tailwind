@@ -1,28 +1,42 @@
-'use client' //utilizar sempre que for utilizar algum hook do react para carrecgar do lado do cliente e nao no servidor
+"use client"; //utilizar sempre que for utilizar algum hook do react para carrecgar do lado do cliente e nao no servidor
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { MdOutlineOpenInNew } from "react-icons/md";
+import { MdMenu, MdOutlineOpenInNew } from "react-icons/md";
 
 export const Header = () => {
-    const currentPath = usePathname();
-
+  const currentPath = usePathname();
 
   return (
-    <nav className="flex items-center justify-center bg-primary">
+    <nav className="flex items-center gap-6 justify-start md:justify-center bg-primary py-2 sm:py-4 px-6">
+      <button className="sm:hidden">
+        <MdMenu size={24} />
+      </button>
       <ul className="flex gap-4 py-4 my-2">
-        <li>
-          <Link href="/"className="border-2 rounded-md py-2 px-1 font-bold">
+        <li className="">
+          <Link href="/" className="border-2 rounded-md py-2 px-1 font-bold">
             CODARSE
           </Link>
         </li>
-        <li>
-          <Link href="/" data-active={currentPath === '/'} className='data-[active=true]:underline'>Página inicial</Link>
+        <li className="hidden sm:block">
+          <Link
+            href="/"
+            data-active={currentPath === "/"}
+            className="data-[active=true]:underline"
+          >
+            Página inicial
+          </Link>
         </li>
-        <li>
-          <Link href="/cursos" data-active={currentPath === '/cursos'} className='data-[active=true]:underline'>Cursos</Link>
+        <li className="hidden sm:block">
+          <Link
+            href="/cursos"
+            data-active={currentPath === "/cursos"}
+            className="data-[active=true]:underline"
+          >
+            Cursos
+          </Link>
         </li>
-        <li>
+        <li className="hidden sm:block">
           <Link
             href="https://blog.codarse.com"
             target="_blank"
@@ -33,6 +47,7 @@ export const Header = () => {
           </Link>
         </li>
       </ul>
+      <h1 className="sm:hidden">Codar-se - Pagina Inicial</h1>
     </nav>
   );
 };
